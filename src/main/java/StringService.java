@@ -1,4 +1,25 @@
+import java.util.Arrays;
+
 public class StringService {
+
+    // сортировка пузырьком
+    public int[] sort(int[] array) {
+        boolean isSorted;
+        for (int i = 0; i < array.length; i++) {
+            isSorted = true;
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
+                    isSorted = false;
+                }
+            }
+            if (isSorted)
+                break;
+        }
+        return array;
+    }
 
     //палиндром
     public boolean isPalindrome(String s) {
@@ -8,11 +29,8 @@ public class StringService {
             if (array[i] != ' ')
                 sb.append(array[i]);
         }
-        int halfLength = sb.length() / 2;
-
-        String s1 = sb.substring(0, halfLength);
-        StringBuilder sbR = sb.reverse();
-        String s2= sbR.substring(0, halfLength);
+        String s1 = sb.toString();
+        String s2 = sb.reverse().toString();
 
         return s1.equalsIgnoreCase(s2);
     }
