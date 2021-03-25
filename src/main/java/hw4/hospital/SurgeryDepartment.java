@@ -1,8 +1,10 @@
 package hw4.hospital;
 
+import java.util.List;
+
 public class SurgeryDepartment extends HospitalDepartment{
-    public SurgeryDepartment(String departmentName, String departmentHead) {
-        super(departmentName, departmentHead);
+    public SurgeryDepartment(String departmentName, HospitalWorker departmentHead, List<HospitalWorker> staffOfDepartment) {
+        super(departmentName, departmentHead, staffOfDepartment);
     }
 
     public void вырезать() {

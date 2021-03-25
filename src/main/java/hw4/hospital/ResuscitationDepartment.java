@@ -1,9 +1,13 @@
 package hw4.hospital;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ResuscitationDepartment extends HospitalDepartment{
-    public ResuscitationDepartment(String departmentName, String departmentHead) {
-        super(departmentName, departmentHead);
+    public ResuscitationDepartment(String departmentName, HospitalWorker departmentHead, List<HospitalWorker> staffOfDepartment) {
+        super(departmentName, departmentHead, staffOfDepartment);
     }
+
     public void разрядЕщёРазряд() {
         System.out.println("Человек реанимирован и пошел гулять по воде");
     }

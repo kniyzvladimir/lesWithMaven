@@ -1,8 +1,10 @@
 package hw4.hospital;
 
+import java.util.List;
+
 public class TraumatologyDepartment extends HospitalDepartment{
-    public TraumatologyDepartment(String departmentName, String departmentHead) {
-        super(departmentName, departmentHead);
+    public TraumatologyDepartment(String departmentName, HospitalWorker departmentHead, List<HospitalWorker> staffOfDepartment) {
+        super(departmentName, departmentHead, staffOfDepartment);
     }
 
     public void вправитьЧелюсть() {
