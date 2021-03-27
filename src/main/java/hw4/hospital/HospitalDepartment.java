@@ -6,17 +6,16 @@ import java.util.List;
 public abstract class HospitalDepartment {
     private String departmentName;
     private HospitalWorker departmentHead;
-
-    public List<HospitalWorker> getStaffOfDepartment() {
-        return staffOfDepartment;
-    }
-
     private List <HospitalWorker> staffOfDepartment;
 
     public HospitalDepartment(String departmentName, HospitalWorker departmentHead, List <HospitalWorker> staffOfDepartment) {
         this.departmentName = departmentName;
         this.departmentHead = departmentHead;
         this.staffOfDepartment = staffOfDepartment;
+    }
+
+    public List<HospitalWorker> getStaffOfDepartment() {
+        return staffOfDepartment;
     }
 
     public String getDepartmentName() {

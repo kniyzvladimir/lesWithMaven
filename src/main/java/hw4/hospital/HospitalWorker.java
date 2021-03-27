@@ -5,14 +5,12 @@ public abstract class HospitalWorker {
     private int age;
     private String position;
     private String specialization;
-    private String department;
 
-    public HospitalWorker(String name, int age, String position, String specialization, String department) {
+    public HospitalWorker(String name, int age, String position, String specialization) {
         this.name = name;
         this.age = age;
         this.position = position;
         this.specialization = specialization;
-        this.department = department;
     }
 
     public String getName() {
